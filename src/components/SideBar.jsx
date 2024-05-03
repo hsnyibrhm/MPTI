@@ -78,6 +78,7 @@ export function Sidebar(active) {
               Laporan Penjualan
             </Link>
           </ListItem>
+          {/* pembatas */}
           <ListItem
             className={`h-16 rounded-lg mb-4 flex items-center ${
               activeItem.active === "Atur Stok"
@@ -102,6 +103,7 @@ export function Sidebar(active) {
               Atur Stok
             </Link>
           </ListItem>
+          {/* pembatas */}
           <ListItem
             className={`h-16 rounded-lg mb-4 flex items-center ${
               activeItem.active === "Profile"
