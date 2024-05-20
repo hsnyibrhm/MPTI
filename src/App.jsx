@@ -6,6 +6,7 @@ import { Daftarkan } from "./pages/DaftarPelanggan";
 import { LaporanPenjualan } from "./pages/LaporanPenjualan";
 import { AturStok } from "./pages/AturStok";
 import Profile from "./pages/Profile";
+import RiwayatStok from "./pages/RiwayatStok";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/Laporanpenjualan" element={<LaporanPenjualan />} />
             <Route path="/atur-stok" element={<AturStok />} />
             <Route path="/Profile" element={<Profile />} />
+            <Route path="/riwayat-stok" element={<RiwayatStok />} />
             {/* <Route path="/signup" element={<SignupPage />} /> */}
           </Routes>
         </BrowserRouter>
