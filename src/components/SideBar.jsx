@@ -119,7 +119,14 @@ export function Sidebar(active) {
                 }`}
               />
             </ListItemPrefix>
-            <span>Profile</span>
+            <Link
+              to="/Profile"
+              className={`text-[#4aae64] ${
+                activeItem.active === "Profile" ? "text-white" : ""
+              }`}
+            >
+              Profile
+            </Link>
           </ListItem>
         </List>
       </Card>

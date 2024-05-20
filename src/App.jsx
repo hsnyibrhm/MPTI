@@ -5,6 +5,7 @@ import { CekNik } from "./pages/CekNIK";
 import { Daftarkan } from "./pages/DaftarPelanggan";
 import { LaporanPenjualan } from "./pages/LaporanPenjualan";
 import { AturStok } from "./pages/AturStok";
+import Profile from "./pages/Profile";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/Daftarkan" element={<Daftarkan />} />
             <Route path="/Laporanpenjualan" element={<LaporanPenjualan />} />
             <Route path="/atur-stok" element={<AturStok />} />
+            <Route path="/Profile" element={<Profile />} />
             {/* <Route path="/signup" element={<SignupPage />} /> */}
           </Routes>
         </BrowserRouter>
