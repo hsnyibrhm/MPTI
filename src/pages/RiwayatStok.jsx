@@ -1,4 +1,3 @@
-import React from "react";
 import { Sidebar } from "../components/SideBar";
 
 export const RiwayatStok = () => {
@@ -61,5 +60,4 @@ export const RiwayatStok = () => {
     </div>
   );
 };
-
 export default RiwayatStok;
