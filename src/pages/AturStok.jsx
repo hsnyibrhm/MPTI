@@ -57,12 +57,13 @@ export const AturStok = () => {
             <p>Harga Jual (Harga Per Tabung)</p>
             <p className="text-2xl">Rp 15500</p>
           </div>
-          <button
+          <Link
+            to="/aturharga"
             className="bg-white text-[#4AAE64] px-4 py-2 rounded-lg hover:bg-gray-100"
             style={{ width: "400px" }}
           >
             Atur Harga Beli dan Harga Jual
-          </button>
+          </Link>
         </div>
       </section>
     </div>

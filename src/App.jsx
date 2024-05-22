@@ -7,6 +7,7 @@ import { LaporanPenjualan } from "./pages/LaporanPenjualan";
 import { AturStok } from "./pages/AturStok";
 import Profile from "./pages/Profile";
 import RiwayatStok from "./pages/RiwayatStok";
+import AturHarga from "./pages/AturHarga";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/atur-stok" element={<AturStok />} />
             <Route path="/Profile" element={<Profile />} />
             <Route path="/riwayat-stok" element={<RiwayatStok />} />
+            <Route path="/aturharga" element={<AturHarga />} />
             {/* <Route path="/signup" element={<SignupPage />} /> */}
           </Routes>
         </BrowserRouter>
