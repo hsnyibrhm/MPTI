@@ -22,7 +22,7 @@ const Profile = () => {
           Identitas Pangkalan LPG 3Kg
         </h3>
         <div
-          className="bg-gray-100 p-4 rounded-lg shadow-md"
+          className="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col justify-between"
           style={{
             height: "274px",
             width: "986px",
@@ -31,15 +31,15 @@ const Profile = () => {
             color: "#4AAE64",
           }}
         >
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Agen</span>
             <span>791732 - PT.GRAHA GAS NIAGA</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>MID</span>
             <span>LPG_021035</span>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between pb-2">
             <span>Nama Pangkalan LPG 3 Kg</span>
             <span>EGI RAHAYU</span>
           </div>
@@ -54,7 +54,7 @@ const Profile = () => {
           Informasi Pemilik Pangkalan LPG 3 Kg
         </h3>
         <div
-          className="bg-gray-100 p-4 rounded-lg shadow-md"
+          className="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col justify-between"
           style={{
             height: "348px",
             width: "986px",
@@ -63,19 +63,19 @@ const Profile = () => {
             color: "#4AAE64",
           }}
         >
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Nama Pemilik</span>
             <span>EGI RAHAYU</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>No. KTP</span>
             <span>3310185802690001</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>No. Handphone</span>
             <span>081329031131</span>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between pb-2">
             <span>Email</span>
             <span>rahayuegi18@gmail.com</span>
           </div>
@@ -114,7 +114,7 @@ const Profile = () => {
           Alamat Pangkalan LPG 3 Kg
         </h3>
         <div
-          className="bg-gray-100 p-4 rounded-lg shadow-md"
+          className="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col justify-between"
           style={{
             height: "493px",
             width: "986px",
@@ -123,27 +123,27 @@ const Profile = () => {
             color: "#4AAE64",
           }}
         >
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Provinsi</span>
             <span>JAWA TENGAH</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Kota/Kab.</span>
             <span>KABUPATEN KLATEN</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Kecamatan</span>
             <span>KARANGANOM</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Kelurahan</span>
             <span>GLEDEG</span>
           </div>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-2 border-b border-gray-300 pb-2">
             <span>Kode Pos</span>
             <span>57475</span>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between pb-2">
             <span>Alamat</span>
             <span>GLEDEG RT.002 RW.003</span>
           </div>
