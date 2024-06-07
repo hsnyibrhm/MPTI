@@ -23,8 +23,13 @@ export const AturStok = () => {
             </Link>
           </div>
           <div
-            className="bg-[#4AAE64] p-4 rounded-lg shadow-md flex items-center justify-between cursor-pointer"
-            style={{ width: "986px", height: "90px", flexShrink: 0 }}
+            className="bg-[#4AAE64] p-4 rounded-lg flex items-center justify-between cursor-pointer"
+            style={{
+              width: "986px",
+              height: "90px",
+              flexShrink: 0,
+              boxShadow: "9px 10px 14.9px 0px rgba(0, 0, 0, 0.25)",
+            }}
           >
             <div>
               <h4 className="text-white text-xl">ReStok</h4>
@@ -36,35 +41,32 @@ export const AturStok = () => {
 
         <section>
           <div
-            className="bg-[#4AAE64] p-4 rounded-lg shadow-md"
-            style={{ width: "986px", height: "345px", flexShrink: 0 }}
+            className="bg-[#4AAE64] p-4 rounded-lg flex flex-col items-center"
+            style={{
+              width: "100%", // Ubah lebar menjadi responsif
+              minHeight: "345px", // Gunakan minHeight untuk ketinggian fleksibel
+              boxShadow: "9px 10px 14.9px 0px rgba(0, 0, 0, 0.25)",
+            }}
           >
             <h4 className="text-white text-xl mb-4">Atur Harga Produk</h4>
-            <div className="text-white mb-4">
+            <div className="text-white mb-4 text-center">
               <p>Harga Beli (Harga Per Tabung)</p>
               <p className="text-2xl">Rp 14250</p>
             </div>
-            <div className="text-white mb-4">
+            <div className="text-white mb-4 text-center">
               <p>Harga Jual (Harga Per Tabung)</p>
               <p className="text-2xl">Rp 15500</p>
             </div>
-            <div className="flex justify-center">
-              <Link
-                to="/aturharga"
-                className="bg-white text-[#4AAE64] px-4 py-2 rounded-lg hover:bg-gray-100 text-center"
-                style={{ width: "400px" }}
-              >
-                Atur Harga Beli dan Harga Jual
-              </Link>
-            </div>
+            <Link
+              to="/aturharga"
+              className="bg-white text-[#4AAE64] px-4 py-2 rounded-lg hover:bg-gray-100 text-center mt-8" // Tambahkan mt-8 untuk margin atas
+              style={{ width: "400px" }}
+            >
+              Atur Harga Beli dan Harga Jual
+            </Link>
           </div>
         </section>
       </div>
-
-      {/* <div className="bg-green-100 p-4 rounded-lg shadow-lg h-full">
-          <h2 className="text-2xl font-bold text-green-600">Riwayat Stok</h2>
-          {/* Tambahkan daftar riwayat stok di sini 
-        </div> */}
     </div>
   );
 };

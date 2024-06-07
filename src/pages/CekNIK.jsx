@@ -1,100 +1,80 @@
-import Button from "../components/Button";
+import { useState } from "react";
 import { Sidebar } from "../components/SideBar";
+import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
-export const CekNik = () => {
+const CekNik = () => {
+  const [nik, setNik] = useState("");
+
+  const handleCheckNIK = () => {
+    // Logic to check NIK goes here
+    console.log("NIK:", nik);
+  };
+
   return (
     <div className="bg-white min-h-screen flex">
-      <div className="flex-grow">
-        <Sidebar active="Cek NIK" />
-      </div>
-
-      <div className="flex flex-col gap-6">
-        <div className="flex-grow-0 relative top-[50px] w-[1019px] h-[306px]">
-          <div className="bg-[#49ad63] rounded-[30px] shadow-[9px_10px_14.9px_#00000040] relative">
-            <div className="relative w-[1019px] h-[306px] top-[-30px] left-[40px] bg-[url(/group-6.png)] bg-[100%_100%]">
-              <div className="absolute w-[842px] h-[150px] top-[40px] left-[40px]">
-                <div className="flex flex-col items-start gap-5 absolute w-[842px] h-[134px] top-0 left-0">
-                  <p className="relative self-stretch font-bold text-white text-3xl">
-                    NIK KTP Pelanggan
-                    <br />
-                  </p>
-                  <p className="relative self-stretch font-normal text-white text-xl">
-                    Masukkan dan cek NIK pelanggan untuk melanjutkan transaksi
-                    LPG 3 Kg
-                  </p>
-                </div>
-                <p className="absolute w-[525px] top-[112px] left-0 font-normal text-white text-base">
-                  Masukkan 16 digit NIK KTP Pelanggan
-                </p>
-              </div>
-              <div className="absolute w-[858px] h-[80px] top-[190px] left-[55px]">
-                <form className="flex flex-col items-center">
-                  <input
-                    type="text"
-                    className="w-full rounded-md bg-none border border-gray-300 px-4 py-3 text-lg text-gray-800 mb-4"
-                    placeholder="Masukkan 16 digit NIK KTP Pelanggan"
-                    pattern="[0-9]{16}"
-                    title="NIK harus terdiri dari 16 digit angka"
-                  />
-                  <Button className="w-[164px] h-[43px] ">Cek</Button>
-                </form>
-                <div className="absolute w-[525px] bottom-0 left-[4px] font-normal text-[#e4151573] text-xl">
-                  *wajib diisi
-                </div>
-              </div>
+      <Sidebar active="Cek NIK" />
+      <div className="flex flex-col items-center justify-center w-full p-10 gap-6">
+        {/* Section 1: Cek NIK */}
+        <div
+          className="bg-[#49ad63] rounded-[30px] shadow-lg p-8 w-full max-w-4xl relative flex flex-col items-center justify-center"
+          style={{
+            width: "989px",
+            height: "320px",
+            flexShrink: 0,
+            boxShadow: "4px 4px 15px 0px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <div className="text-white w-full text-center">
+            <h1 className="text-3xl font-bold mb-2">NIK KTP Pelanggan</h1>
+            <p className="text-xl mb-4">
+              Masukkan dan cek NIK pelanggan untuk melanjutkan transaksi LPG 3
+              Kg
+            </p>
+            <div className="flex flex-col items-start w-full">
+              <input
+                type="text"
+                value={nik}
+                onChange={(e) => setNik(e.target.value)}
+                placeholder="Masukkan 16 digit NIK KTP Pelanggan"
+                pattern="[0-9]{16}"
+                title="NIK harus terdiri dari 16 digit angka"
+                className="w-full p-3 rounded-md border border-gray-300 text-gray-800"
+              />
+              <p className="text-red-500 mt-2 text-left">*wajib diisi</p>
             </div>
+            <Button onClick={handleCheckNIK} className="w-40 h-12 mt-4">
+              Cek
+            </Button>
           </div>
         </div>
 
-        <div className="flex-grow-0 relative top-[50px] w-[1019px] h-[306px]">
-          <div className="bg-[#49ad63] rounded-[30px] shadow-[9px_10px_14.9px_#00000040] relative">
-            <div className="relative w-[1019px] h-[306px] top-[-30px] left-[40px] bg-[url(/group-6.png)] bg-[100%_100%]">
-              <div className="absolute w-[842px] h-[150px] top-[40px] left-[40px]">
-                <div className="flex flex-col items-start gap-5 absolute w-[842px] h-[134px] top-0 left-0">
-                  <p className="relative self-stretch font-bold text-white text-3xl">
-                    Pelanggan Belum Terdaftar?
-                    <br />
-                  </p>
-                  <p className="relative self-stretch font-normal text-white text-xl">
-                    Daftarkan pelanggan rumah tangga atau usaha mikro untuk
-                    dapat transaksi LPG 3 Kg
-                  </p>
-                </div>
-                {/* <p className="absolute w-[525px] top-[112px] left-0 font-normal text-white text-base">
-                  Masukkan 16 digit NIK KTP Pelanggan
-                </p> */}
-              </div>
-              <div className="absolute w-[858px] h-[80px] top-[190px] left-[55px]">
-                <form className="flex flex-col items-center">
-                  {/* <input
-                    type="text"
-                    className="w-full rounded-md bg-none border border-gray-300 px-4 py-3 text-lg text-gray-800 mb-4"
-                    placeholder="Masukkan 16 digit NIK KTP Pelanggan"
-                    pattern="[0-9]{16}"
-                    title="NIK harus terdiri dari 16 digit angka"
-                  /> */}
-                  {/* example:
-                    <Link to="/dashboard">
-                        <Button style={myStyle}>
-                          <p>Click Me!</p>
-                        </Button>
-                    </Link>
-                  
-                  */}
-
-                  <Button className="w-[488px] h-[43px]">
-                    <Link to="/Daftarkan">Daftarkan Pelanggan Baru</Link>
-                  </Button>
-                </form>
-                {/* <div className="absolute w-[525px] bottom-0 left-[4px] font-normal text-[#e4151573] text-xl">
-                  *wajib diisi
-                </div> */}
-              </div>
-            </div>
+        {/* Section 2: Daftarkan Pelanggan Baru */}
+        <div
+          className="bg-[#49ad63] rounded-[30px] shadow-lg p-8 w-full max-w-4xl relative"
+          style={{
+            width: "989px",
+            height: "286px",
+            flexShrink: 0,
+            boxShadow: "4px 4px 15px 0px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <div className="text-white">
+            <h1 className="text-3xl font-bold mb-2">
+              Pelanggan Belum Terdaftar?
+            </h1>
+            <p className="text-xl mb-4">
+              Daftarkan pelanggan rumah tangga atau usaha mikro untuk dapat
+              transaksi LPG 3 Kg
+            </p>
+            <Link to="/Daftarkan">
+              <Button className="w-full h-12">Daftarkan Pelanggan Baru</Button>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default CekNik;
