@@ -5,16 +5,28 @@ import { Link } from "react-router-dom";
 
 const CekNik = () => {
   const [nik, setNik] = useState("");
+  const [nikValid, setNikValid] = useState(true);
 
   const handleCheckNIK = () => {
-    // Logic to check NIK goes here
-    console.log("NIK:", nik);
+    // Simple validation for demonstration purposes
+    // NIK should be 16 digits long
+    const isValid = nik.length === 16 && !isNaN(nik);
+    setNikValid(isValid);
+
+    if (isValid) {
+      // Logic to check NIK goes here
+      // For example, sending nik to an API endpoint
+      console.log("NIK is valid:", nik);
+      // Perform API call or further processing
+    } else {
+      console.log("NIK is invalid:", nik);
+    }
   };
 
   return (
-    <div className="bg-white min-h-screen flex">
+    <div className="flex min-h-screen">
       <Sidebar active="Cek NIK" />
-      <div className="flex flex-col items-center justify-center w-full p-10 gap-6">
+      <div className="flex-1 flex flex-col items-center justify-center p-10 gap-6 ml-4">
         {/* Section 1: Cek NIK */}
         <div
           className="bg-[#49ad63] rounded-[30px] shadow-lg p-8 w-full max-w-4xl relative flex flex-col items-center justify-center"
@@ -39,9 +51,15 @@ const CekNik = () => {
                 placeholder="Masukkan 16 digit NIK KTP Pelanggan"
                 pattern="[0-9]{16}"
                 title="NIK harus terdiri dari 16 digit angka"
-                className="w-full p-3 rounded-md border border-gray-300 text-gray-800"
+                className={`w-full p-3 rounded-md border ${
+                  nikValid ? "border-gray-300" : "border-red-500"
+                } text-gray-800`}
               />
-              <p className="text-red-500 mt-2 text-left">*wajib diisi</p>
+              {!nikValid && (
+                <p className="text-red-500 mt-2 text-left">
+                  NIK harus terdiri dari 16 digit angka
+                </p>
+              )}
             </div>
             <Button onClick={handleCheckNIK} className="w-40 h-12 mt-4">
               Cek
