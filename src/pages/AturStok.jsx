@@ -1,7 +1,12 @@
 import { Sidebar } from "../components/SideBar";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const AturStok = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/Restok");
+  };
   return (
     <div className="container mx-auto p-4 flex">
       <Sidebar active="Atur Stok" />
@@ -30,6 +35,7 @@ export const AturStok = () => {
               flexShrink: 0,
               boxShadow: "9px 10px 14.9px 0px rgba(0, 0, 0, 0.25)",
             }}
+            onClick={handleNavigate}
           >
             <div>
               <h4 className="text-white text-xl">ReStok</h4>

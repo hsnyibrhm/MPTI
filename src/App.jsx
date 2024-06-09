@@ -8,6 +8,7 @@ import RiwayatStok from "./pages/RiwayatStok";
 import AturHarga from "./pages/AturHarga";
 import CekNik from "./pages/CekNIK";
 import LaporanPenjualan from "./pages/LaporanPenjualan";
+import ReStok from "./pages/Restok";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/riwayat-stok" element={<RiwayatStok />} />
             <Route path="/aturharga" element={<AturHarga />} />
+            <Route path="/Restok" element={<ReStok />} />
             {/* <Route path="/signup" element={<SignupPage />} /> */}
           </Routes>
         </BrowserRouter>

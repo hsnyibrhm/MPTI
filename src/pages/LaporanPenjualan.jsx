@@ -8,17 +8,23 @@ const LaporanPenjualan = () => {
   const [endDate, setEndDate] = useState(new Date());
 
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center p-10">
+    <div className="bg-white min-h-screen flex flex-col items-start p-10">
       <Sidebar active="Laporan Penjualan" />
-      <h1 className="text-green-600 text-3xl font-bold mb-10">
+      <h1 className="text-green-600 text-3xl font-bold mb-10 self-start">
         Laporan Penjualan
       </h1>
       <div className="w-full" style={{ maxWidth: "911px" }}>
-        <div className="mb-6">
-          <label className="text-green-600 text-xl font-semibold mb-2">
+        {/* batas */}
+        <div className="mb-6 w-full">
+          <label
+            className="text-green-600 text-xl font-semibold mb-2 block"
+            style={{ textAlign: "left" }}
+          >
             Pilih Tanggal Rentang Waktu
           </label>
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-start w-full">
+            {" "}
+            {/* Mengubah justify-end menjadi justify-start */}
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
@@ -27,6 +33,7 @@ const LaporanPenjualan = () => {
               endDate={endDate}
               className="bg-green-500 text-white rounded-full p-3 mt-2"
               wrapperClassName="date-picker-wrapper"
+              style={{ marginLeft: "0" }} // Mengatur margin-left ke 0
             />
             <span className="mx-4">-</span>
             <DatePicker
@@ -38,6 +45,7 @@ const LaporanPenjualan = () => {
               minDate={startDate}
               className="bg-green-500 text-white rounded-full p-3 mt-2"
               wrapperClassName="date-picker-wrapper"
+              style={{ marginLeft: "0" }} // Mengatur margin-left ke 0
             />
           </div>
         </div>
