@@ -2,12 +2,12 @@ import LoginPage from "./pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LupaSandi } from "./pages/LupaSandi";
 import { Daftarkan } from "./pages/DaftarPelanggan";
-import { LaporanPenjualan } from "./pages/LaporanPenjualan";
 import { AturStok } from "./pages/AturStok";
 import Profile from "./pages/Profile";
 import RiwayatStok from "./pages/RiwayatStok";
 import AturHarga from "./pages/AturHarga";
 import CekNik from "./pages/CekNIK";
+import LaporanPenjualan from "./pages/LaporanPenjualan";
 
 export default function App() {
   return (

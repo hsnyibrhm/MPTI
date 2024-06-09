@@ -26,15 +26,19 @@ const CekNik = () => {
   return (
     <div className="flex min-h-screen">
       <Sidebar active="Cek NIK" />
-      <div className="flex-1 flex flex-col items-center justify-center p-10 gap-6 ml-4">
+      <div
+        className="flex-1 flex flex-col items-center justify-center p-10 gap-6 ml-4"
+        style={{ marginLeft: "-10px" }}
+      >
         {/* Section 1: Cek NIK */}
         <div
           className="bg-[#49ad63] rounded-[30px] shadow-lg p-8 w-full max-w-4xl relative flex flex-col items-center justify-center"
           style={{
-            width: "989px",
+            width: "986px", // Adjusted width here
             height: "320px",
             flexShrink: 0,
             boxShadow: "4px 4px 15px 0px rgba(0, 0, 0, 0.25)",
+            marginLeft: "-10px",
           }}
         >
           <div className="text-white w-full text-center">
@@ -71,10 +75,11 @@ const CekNik = () => {
         <div
           className="bg-[#49ad63] rounded-[30px] shadow-lg p-8 w-full max-w-4xl relative"
           style={{
-            width: "989px",
+            width: "986px", // Adjusted width here
             height: "286px",
             flexShrink: 0,
             boxShadow: "4px 4px 15px 0px rgba(0, 0, 0, 0.25)",
+            marginLeft: "-10px",
           }}
         >
           <div className="text-white">
