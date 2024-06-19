@@ -37,16 +37,14 @@ const ReStok = () => {
           ReStok
         </h1>
         <div className="text-container">
-          {" "}
-          {/* Wrap text in flex container */}
           <p
             className="text-green-500 text-3xl font-normal mb-10"
             style={{ fontFamily: "Poppins" }}
           >
-            Melengkapi Stok saat dengan stok baru
+            Melengkapi Stok saat ini dengan stok baru
           </p>
         </div>
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-lgm ">
           <div className="mb-6">
             <label
               className="block text-green-500 text-[26px] font-medium mb-2"
@@ -54,7 +52,7 @@ const ReStok = () => {
             >
               Pilih Tanggal
             </label>
-            <div className="bg-green-500 text-white rounded-full p-3 mt-2 flex justify-center w-[942px] h-[43px]">
+            <div className="w-[942px] h-[43px] bg-green-500 rounded-[10px] shadow text-white p-3 mt-2 flex justify-center">
               {tanggal}
             </div>
           </div>
@@ -66,7 +64,7 @@ const ReStok = () => {
             >
               Stok LPG 3 Kg
             </label>
-            <div className="bg-green-300 text-white rounded-full p-3 mt-2 flex justify-center w-[942px] h-[43px]">
+            <div className="w-[942px] h-[43px] bg-green-500 rounded-[10px] shadow text-white p-3 mt-2 flex justify-center">
               {stokLPG}
             </div>
           </div>
@@ -78,28 +76,35 @@ const ReStok = () => {
             >
               Jumlah Stok yang Ditambahkan:
             </label>
-            <div className="bg-green-300 text-white rounded-full p-3 mt-2 flex justify-center w-[942px] h-[43px]">
+            <div className="w-[942px] h-[43px] bg-green-500 rounded-[10px] shadow text-white p-3 mt-2 flex justify-center">
               {stokTambah}
             </div>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 ">
             <label
               className="block text-green-500 text-[26px] font-medium mb-2"
               style={{ fontFamily: "Poppins" }}
             >
               Keterangan
             </label>
-            <div className="bg-green-300 text-white rounded-full p-3 mt-2 flex justify-center w-[942px] h-[43px]">
+            <div className="w-[942px] h-[43px] bg-green-500 rounded-[10px] shadow text-white p-3 mt-2 flex justify-center">
               {keterangan}
             </div>
           </div>
-
           <div className="flex justify-end w-full">
-            {" "}
             <button
               onClick={handlePerbaruiStok}
-              className="bg-green-500 text-white rounded-full px-6 py-3 mt-4 w-[618px] h-[57px]"
+              className="text-white rounded-[10px] shadow px-6 py-3 mt-4 transform"
+              style={{
+                backgroundColor: "#4AAE64",
+                fontSize: "25px",
+                fontWeight: "medium",
+                fontFamily: "Poppins",
+                width: "618px",
+                height: "57px",
+                transform: "translateX(200px)",
+              }}
             >
               Perbarui Stok
             </button>
